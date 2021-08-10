@@ -1,2 +1,41 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.topevents4.me/Htdocs/Images/Pictures/4125.jpg?puid=b4203bca-3d2a-46da-b816-d31e21185253.png);"> 
+    <div class="container">
+      <h1>Mon Arc</h1>
+      <p>Achat et vente de matériel d'occasion</p>
+    </div>
+</div>
+<div class="container">
+  <h3 class="text-center mt-4 mb-4">Toutes les Annonces</h3>
+    <div class="btn-center">
+      <%= link_to "Voir toutes les annonces", ads_path, class: "btn btn-primary" %>
+    </div>
+</div>
+<div class="container">
+  <div class="box">
+    <h3 class="text-center mt-4 mb-4">Toutes les Catégories</h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.ffta.fr/sites/ffta/files/styles/image-content/public/field/image/464646464664.jpg?itok=Epi9wkQG.jpg)">
+            <a href="#" class="btn btn-primary">les Arcs</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://vincent-lalande.fr/1817-large_default/fleche-carbon-express-pile-driver.jpg)">
+            <a href="#" class="btn btn-primary">Les Flèches</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://2.bp.blogspot.com/-hy8V70expFU/T37UisxBVOI/AAAAAAAABhk/SZZRwW2c_TU/s1600/9_Viseur_9486.jpg)">
+            <a href="#" class="btn btn-primary">les Accessoirs de l'Arc</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
