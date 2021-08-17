@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Toutes les Annonces</h2>
+
+  <ul>
+    <% @ads.each do |ad| %>
+      <li><%= link_to ad.title, ad_path(ad) %></li>
+    <% end %>
+  </ul>

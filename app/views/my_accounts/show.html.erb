@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Mon compte</h1>
+    <%= current_user.name %>
+    <%= current_user.email %>
+  
+  <h3>Mes annonces</h3>
+    <ul>
+      <% @ads.each do |ad| %>
+        <li><%= ad.title %> - <%= ad.equipment %> - <%= ad.price %> - <%= ad.state %> - <%= ad.description %> - <%= ad.address %>
+        <%= link_to "Modifier #{@ad.title}",
+                edit_ad_path(@ad),
+                method: :edit
+              %>
+        <%= link_to "Suprimer #{@ad.title}",
+                ad_path(@ad),
+                method: :delete,
+                data: { confirm: "Êtes-vous sûr?" } %>
+        </li>
+      <% end %>
+    </ul>
+</div>
