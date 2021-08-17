@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Créer une nouvelle annonce</h1>
+    <%= simple_form_for(@ad) do |f| %>
+      <%= f.input :title, 
+                  label: "Titre de l'annonce", 
+                  placeholder: "Arc classic....." %>
+      <%= f.input :equipment, 
+                  collection: ["Arcs","Flèches","Accessoires de l'Arc", "Accessoires de l'archer"],
+                  label: "Matériel", 
+                  placeholder: "Arc, flèches, ....." %>
+      <%= f.input :mark,
+                  label: "Marque",
+                  placeholder: "Hoyt, Win&Win, Uukha, ....." %>
+      <%= f.input :matter,
+                  label: "matière",
+                  placeholder: "Bois, Foam, Carbon, ....." %>
+      <%= f.input :resistance,
+                  label: "Puissance/Rigidité"
+                  placeholder: "30 lbs/spine 250 ...." %>
+      <%= f.input :length,
+                  label: "Longeur",
+                  placeholder: " 30 cm, ...." %>
+      <%= f.input :waist, 
+                  label: "Taille",
+                  placeholder: "70 p ...." %>
+      <%= f.input :price, 
+                  label: "Prix", 
+                  placeholder: "0,00€" %>
+      <%= f.input :state,
+                  collection: ["Très bon état","Bon état","Moyen","Abimé"], 
+                  label: "Etat", 
+                  placeholder: "Bon état" %>
+      <%= f.input :description, 
+                  label: "Description" %>
+      <%= f.input :address, 
+                  label: "Lieux", 
+                  placeholder: "1 rue de la republique, Paris 75000" %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
+      <%= f.submit "Créer l'annonce", class: 'btn btn-primary'%>
+    <% end %>
+</div>

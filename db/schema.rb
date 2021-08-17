@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_115435) do
     t.string "matter"
     t.integer "resistance"
     t.integer "length"
-    t.integer "wait"
+    t.integer "waist"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
